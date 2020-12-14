@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <title>ICE CREAM</title>
+  </head>
+
+  <body class="page" data-overflow>
+    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+    <include src="./partials/header.html"></include>
+    <include src="./partials/hero.html"></include>
+    <include src="./partials/products.html"></include>
+    <!-- <include src="./partials/how-made.html"></include> -->
+    <include src="./partials/cow.html"></include>
+    <include src="./partials/quality.html"></include>
+    <include src="./partials/reviews.html"></include>
+    <include src="./partials/contacts.html"></include>
+    <include src="./partials/footer.html"></include>
+    <include src="./partials/modal-read-more.html"></include>
+    <include src="./partials/modal-map.html"></include>
+    <include src="./partials/modal-franchise.html"></include>
+    <include src="./partials/scroll-up.html"></include>
+
+    <include src="./partials/modal-buy-now.html"></include>
+
+    <script src="./index.js"></script>
+
+    <script src="./js/menu.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="./js/swiper.js"></script>
+
+    <script src="./js/body-scroll.js"></script>
+
+    <script src="./js/scroll-header-down.js"></script>
+
+    <script src="./js/scroll-up.js"></script>
+
+    <script src="./js/modal-buy-now.js"></script>
+    <script src="./js/modal-buy-now2.js"></script>
+    <script src="./js/modal-buy-now3.js"></script>
+    <script src="./js/modal-buy-now4.js"></script>
+    <script src="./js/modal-buy-now5.js"></script>
+
+    <script src="./js/modal-rm.js"></script>
+    <script src="./js/modal-map.js"></script>
+    <script src="./js/modal-franchise.js"></script>
+
+    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+    <include src="./partials/scroll-up.html"></include>
+
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="./index.js"></script>
+    <script>
+      var smoothJumpUp = function () {
+        if (
+          document.header.scrollTop > 0 ||
+          document.documentElement.scrollTop > 0
+        ) {
+          window.scrollBy(0, -50);
+          setTimeout(smoothJumpUp, 1);
+        }
+      };
+
+      window.onscroll = function () {
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrolled > 100) {
+          document.getElementById('upbutton').style.display = 'flex';
+        } else {
+          document.getElementById('upbutton').style.display = 'none';
+        }
+      };
+    </script>
+  </body>
+</html>
